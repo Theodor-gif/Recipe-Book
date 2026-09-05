@@ -1,0 +1,170 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "title": "Classic Scrambled Eggs",
+      "category": "easy",
+      "duration": "10 min",
+      "description": "Crack the eggs into a bowl and whisk with a splash of milk, salt, and pepper until fully combined. Heat butter in a non-stick pan over low-medium heat. Pour in the eggs and let them sit for a few seconds, then gently stir with a spatula, pushing the eggs from the edges to the center. Keep stirring gently until soft curds form and the eggs are just set but still creamy. Remove from heat immediately and serve.",
+      "ingredients": [
+        "4 large eggs",
+        "2 tbsp milk",
+        "1 tbsp butter",
+        "Salt to taste",
+        "Black pepper to taste"
+      ],
+      "photo": "placeholder_scrambled_eggs.png"
+    },
+    {
+      "id": 2,
+      "title": "Margherita Pizza",
+      "category": "difficult",
+      "duration": "2 hr 30 min",
+      "description": "Mix flour, yeast, salt, and water to form a dough, then knead for 10 minutes until smooth. Let it rise for about 2 hours until doubled in size. Punch down the dough and stretch it into a round base on a floured surface. Spread tomato sauce evenly, then top with torn mozzarella and a drizzle of olive oil. Bake in a very hot oven (250°C/480°F) for 8-10 minutes until the crust is golden and the cheese is bubbling. Finish with fresh basil leaves before serving.",
+      "ingredients": [
+        "500g flour",
+        "7g dry yeast",
+        "1 tsp salt",
+        "300ml warm water",
+        "200g tomato sauce",
+        "250g fresh mozzarella",
+        "Fresh basil leaves",
+        "Olive oil"
+      ],
+      "photo": "placeholder_margherita_pizza.png"
+    },
+    {
+      "id": 3,
+      "title": "Avocado Toast",
+      "category": "easy",
+      "duration": "5 min",
+      "description": "Toast the bread slices until golden and crisp. Mash the avocado in a bowl with lemon juice, salt, and pepper. Spread the mashed avocado generously over the toast. Top with a sprinkle of chili flakes and a drizzle of olive oil before serving.",
+      "ingredients": [
+        "2 slices of bread",
+        "1 ripe avocado",
+        "1 tsp lemon juice",
+        "Salt to taste",
+        "Chili flakes",
+        "Olive oil"
+      ],
+      "photo": "placeholder_avocado_toast.png"
+    },
+    {
+      "id": 4,
+      "title": "Beef Wellington",
+      "category": "difficult",
+      "duration": "2 hr",
+      "description": "Sear the beef fillet on all sides until browned, then let it cool. Sauté finely chopped mushrooms until all moisture evaporates, forming a paste (duxelles). Wrap the beef in prosciutto and the mushroom mixture, then chill. Roll out puff pastry, wrap the beef tightly inside, and seal the edges. Brush with beaten egg and score the top. Bake at 200°C/400°F for about 35-40 minutes until the pastry is golden and the beef reaches the desired doneness. Rest for 10 minutes before slicing.",
+      "ingredients": [
+        "800g beef fillet",
+        "8 slices prosciutto",
+        "400g mushrooms, finely chopped",
+        "500g puff pastry",
+        "2 tbsp Dijon mustard",
+        "1 egg, beaten",
+        "Salt and pepper"
+      ],
+      "photo": "placeholder_beef_wellington.png"
+    },
+    {
+      "id": 5,
+      "title": "Caprese Salad",
+      "category": "easy",
+      "duration": "10 min",
+      "description": "Slice the tomatoes and mozzarella into even rounds. Arrange them alternately on a plate, overlapping slightly. Tuck fresh basil leaves between the slices. Drizzle with olive oil and balsamic glaze, then season with salt and pepper before serving.",
+      "ingredients": [
+        "3 large tomatoes",
+        "250g fresh mozzarella",
+        "Fresh basil leaves",
+        "2 tbsp olive oil",
+        "1 tbsp balsamic glaze",
+        "Salt and pepper to taste"
+      ],
+      "photo": "placeholder_caprese_salad.png"
+    },
+    {
+      "id": 6,
+      "title": "Chicken Ramen",
+      "category": "difficult",
+      "duration": "1 hr 30 min",
+      "description": "Simmer chicken bones, ginger, garlic, and soy sauce for at least an hour to build a deep, flavorful broth, skimming off any foam. Cook the ramen noodles according to package instructions. Poach or pan-sear sliced chicken breast until fully cooked. Assemble bowls with noodles, hot broth, chicken slices, a soft-boiled egg, sliced green onions, and nori sheets. Serve immediately while hot.",
+      "ingredients": [
+        "2 chicken breasts",
+        "1 kg chicken bones",
+        "4 portions ramen noodles",
+        "4 tbsp soy sauce",
+        "2 soft-boiled eggs",
+        "2 green onions, sliced",
+        "2 sheets nori",
+        "Fresh ginger and garlic"
+      ],
+      "photo": "placeholder_chicken_ramen.png"
+    },
+    {
+      "id": 7,
+      "title": "Greek Yogurt Parfait",
+      "category": "easy",
+      "duration": "5 min",
+      "description": "Layer Greek yogurt, granola, and mixed berries in a glass, repeating the layers until the glass is full. Drizzle honey over the top and serve immediately, or refrigerate for a quick grab-and-go breakfast.",
+      "ingredients": [
+        "1 cup Greek yogurt",
+        "1/2 cup granola",
+        "1/2 cup mixed berries",
+        "1 tbsp honey"
+      ],
+      "photo": "placeholder_greek_yogurt_parfait.png"
+    },
+    {
+      "id": 8,
+      "title": "Homemade Lasagna",
+      "category": "difficult",
+      "duration": "2 hr",
+      "description": "Prepare a rich meat sauce (ragù) by browning ground beef with onions, garlic, and tomatoes, simmering for at least 45 minutes. Prepare a béchamel sauce by whisking butter, flour, and milk until thickened. Layer lasagna sheets, meat sauce, béchamel, and grated cheese in a baking dish, repeating until all ingredients are used, finishing with cheese on top. Bake at 180°C/350°F for 40-45 minutes until golden and bubbling. Let rest for 10 minutes before slicing.",
+      "ingredients": [
+        "12 lasagna sheets",
+        "500g ground beef",
+        "400g canned tomatoes",
+        "1 onion, chopped",
+        "2 garlic cloves",
+        "50g butter",
+        "50g flour",
+        "500ml milk",
+        "200g grated parmesan"
+      ],
+      "photo": "placeholder_lasagna.png"
+    },
+    {
+      "id": 9,
+      "title": "Vegetable Stir-Fry",
+      "category": "easy",
+      "duration": "15 min",
+      "description": "Heat oil in a wok or large pan over high heat. Add chopped garlic and ginger and stir-fry for a few seconds until fragrant. Add the mixed vegetables and stir-fry for 5-7 minutes until crisp-tender. Pour in soy sauce and a splash of sesame oil, tossing everything together. Serve hot over rice or noodles.",
+      "ingredients": [
+        "3 cups mixed vegetables (bell pepper, broccoli, carrot)",
+        "2 tbsp soy sauce",
+        "1 tsp sesame oil",
+        "2 garlic cloves, minced",
+        "1 tsp grated ginger",
+        "2 tbsp vegetable oil"
+      ],
+      "photo": "placeholder_vegetable_stir_fry.png"
+    },
+    {
+      "id": 10,
+      "title": "French Croissants",
+      "category": "difficult",
+      "duration": "4 hr",
+      "description": "Prepare a yeasted dough and let it rest in the fridge. Encase a block of cold butter inside the dough and perform a series of folds and rolls (laminating), chilling between each fold to keep the layers distinct. Roll out the laminated dough, cut into triangles, and roll each into a crescent shape. Let the shaped croissants proof until puffy. Brush with egg wash and bake at 200°C/400°F for 15-18 minutes until deep golden brown and flaky.",
+      "ingredients": [
+        "500g flour",
+        "10g salt",
+        "80g sugar",
+        "10g dry yeast",
+        "300ml cold milk",
+        "280g cold butter",
+        "1 egg, beaten (for egg wash)"
+      ],
+      "photo": "placeholder_croissants.png"
+    }
+  ]
+}
