@@ -12,8 +12,8 @@ import { contextData } from "../context/contextApi";
 import { useContext } from "react";
 
 const Home = ({ navigation }) => {
-  const { number } = useContext(contextData);
-
+  const { number, data, loading } = useContext(contextData);
+  if (loading) return <Text>Loading...</Text>;
   return (
     <SafeAreaView edges={["top"]} style={style.container}>
       <ScrollView style={style.scrollView}>
