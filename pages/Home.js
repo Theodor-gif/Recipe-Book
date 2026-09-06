@@ -8,8 +8,12 @@ import {
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { contextData } from "../context/contextApi";
+import { useContext } from "react";
 
-const Home = () => {
+const Home = ({ navigation }) => {
+  const { number } = useContext(contextData);
+
   return (
     <SafeAreaView edges={["top"]} style={style.container}>
       <ScrollView style={style.scrollView}>
@@ -68,6 +72,7 @@ const Home = () => {
               style.button,
               pressed && style.buttonPressed,
             ]}
+            onPress={() => navigation.navigate("Recipes")}
           >
             <Text style={style.buttonText}>Recipes</Text>
           </Pressable>
@@ -158,13 +163,6 @@ const style = StyleSheet.create({
     color: "#557B5F",
     fontSize: 25,
     fontWeight: "bold",
-    shadowColor: "#35180d",
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.5,
-    shadowRadius: 8,
-
-    // Android shadow
-    elevation: 6,
   },
   buttonContainer: {
     justifyContent: "center",
