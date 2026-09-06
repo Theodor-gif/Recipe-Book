@@ -200,6 +200,7 @@ const style = StyleSheet.create({
     marginTop: 70,
     height: 40,
     backgroundColor: "#E2D9CC",
+    marginBottom: 82.5,
   },
 });
 
