@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
 import Home from "../pages/Home.js";
 import Recipes from "../pages/RecipesList";
+import RecipesDetail from "../pages/RecipesDetail.js";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 const Stack = createNativeStackNavigator();
@@ -17,6 +18,7 @@ const HomeNavigation = () => {
       >
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Recipes" component={Recipes} />
+        <Stack.Screen name="RecipesDetail" component={RecipesDetail} />
       </Stack.Navigator>
     </SafeAreaProvider>
   );

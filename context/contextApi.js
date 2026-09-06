@@ -11,6 +11,7 @@ function ContextProvider({ children }) {
   const [number, setNumber] = useState("1");
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     async function getData() {
@@ -29,7 +30,7 @@ function ContextProvider({ children }) {
   }, []);
 
   return (
-    <contextData.Provider value={{ number, data, loading }}>
+    <contextData.Provider value={{ number, data, loading, search, setSearch }}>
       {children}
     </contextData.Provider>
   );

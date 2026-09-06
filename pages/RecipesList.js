@@ -3,9 +3,24 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useContext } from "react";
 import { contextData } from "../context/contextApi";
 import styled from "styled-components/native";
+import { TextInput } from "react-native";
+import RecipesDetail from "./RecipesDetail";
 
-const RecipesList = () => {
-  const { data, loading } = useContext(contextData);
+const SearchHeader = ({ search, setSearch }) => (
+  <HeaderContainer>
+    <SearchImage source={require("../assets/Search-icon.png")} />
+    <SearchText
+      placeholder="Search recipes ..."
+      value={search}
+      onChangeText={setSearch}
+      autoCapitalize="none"
+      autoCorrect={false}
+    />
+  </HeaderContainer>
+);
+
+const RecipesList = ({ navigation }) => {
+  const { data, loading, search, setSearch } = useContext(contextData);
   if (loading) return <Text>Loading ...</Text>;
 
   return (
@@ -23,7 +38,11 @@ const RecipesList = () => {
             <InfoContainer>
               <RecipeName>{item.title}</RecipeName>
               <ButtonContainer>
-                <Button>
+                <Button
+                  onPress={() =>
+                    navigation.navigate("RecipesDetail", { id: item._id })
+                  }
+                >
                   <ButtonText>VIEW</ButtonText>
                 </Button>
               </ButtonContainer>
@@ -31,12 +50,9 @@ const RecipesList = () => {
           </Container>
         )}
         keyExtractor={(item) => item._id}
-        ListHeaderComponent={() => (
-          <HeaderContainer>
-            <Text>Hello</Text>
-            <Text>{data.length} recipes loaded</Text>
-          </HeaderContainer>
-        )}
+        ListHeaderComponent={
+          <SearchHeader search={search} setSearch={setSearch} />
+        }
         ListFooterComponent={() => (
           <FooterContainer>
             <Text>&copy; RECIPE BOOK | TM</Text>
@@ -48,7 +64,7 @@ const RecipesList = () => {
   );
 };
 
-const Safe = styled.SafeAreaView`
+const Safe = styled(SafeAreaView)`
   flex: 1;
 `;
 
@@ -99,9 +115,14 @@ const InfoContainer = styled.View`
 `;
 
 const HeaderContainer = styled.View`
-  padding: 100px;
   border: 1px solid green;
-  margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 70%;
+  margin: 20px auto 50px auto;
+  padding: 10px;
+  border-radius: 20px;
 `;
 
 const FooterContainer = styled.View`
@@ -158,6 +179,15 @@ const Button = styled.TouchableOpacity`
 const ButtonText = styled.Text`
   color: #ffffff;
   font-weight: bold;
+`;
+
+const SearchImage = styled.Image`
+  width: 20px;
+  height: 20px;
+`;
+
+const SearchText = styled.TextInput`
+  font-size: 15px;
 `;
 
 export default RecipesList;

@@ -3,8 +3,9 @@ import { NavigationContainer } from "@react-navigation/native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import AddRecipe from "./pages/AddRecipe";
 import Home from "./navigation/Home.navigation";
-import Recipes from "./pages/RecipesList";
+import Favorite from "./pages/FavoriteRecipe.js";
 import ContextProvider from "./context/contextApi";
+import FavoriteRecipe from "./pages/FavoriteRecipe.js";
 
 const Tab = createNativeBottomTabNavigator();
 
@@ -43,16 +44,17 @@ export default function App() {
               }}
             />
             <Tab.Screen
-              name="RECIPES"
-              component={Recipes}
+              name="FAVORITE"
+              component={FavoriteRecipe}
               options={{
                 headerShown: false,
-                title: "RECIPES",
+                title: "FAVORITE",
                 headerStyle: { backgroundColor: "#5B21B6" },
                 headerTintColor: "#fff",
                 tabBarIcon: {
                   type: "image",
-                  source: require("./assets/Recipes-menu-icon.png"),
+                  source: require("./assets/Favorite-icon.png"),
+                  style: { width: 10, height: 10 },
                 },
               }}
             />
