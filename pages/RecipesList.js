@@ -1,22 +1,41 @@
-import { Text, View, FlatList, TouchableOpacity } from "react-native";
+import { Text, View, FlatList, TouchableOpacity, Image } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useContext } from "react";
 import { contextData } from "../context/contextApi";
 import styled from "styled-components/native";
 import { TextInput } from "react-native";
-import RecipesDetail from "./RecipesDetail";
 
 const SearchHeader = ({ search, setSearch }) => (
-  <HeaderContainer>
-    <SearchImage source={require("../assets/Search-icon.png")} />
-    <SearchText
-      placeholder="Search recipes ..."
-      value={search}
-      onChangeText={setSearch}
-      autoCapitalize="none"
-      autoCorrect={false}
-    />
-  </HeaderContainer>
+  <View>
+    <Header>
+      <LogoContainer>
+        <Image
+          source={require("../assets/screen.png")}
+          style={{ width: 130, height: 50 }}
+        />
+      </LogoContainer>
+      <HeaderImageContainer>
+        <Image
+          source={require("../assets/Bell-icon.png")}
+          style={{ width: 17.5, height: 17.5 }}
+        />
+        <Image
+          source={require("../assets/User-icon.png")}
+          style={{ width: 17.5, height: 17.5 }}
+        />
+      </HeaderImageContainer>
+    </Header>
+    <HeaderContainer>
+      <SearchImage source={require("../assets/Search-icon.png")} />
+      <SearchText
+        placeholder="Search recipes ..."
+        value={search}
+        onChangeText={setSearch}
+        autoCapitalize="none"
+        autoCorrect={false}
+      />
+    </HeaderContainer>
+  </View>
 );
 
 const RecipesList = ({ navigation }) => {
@@ -29,7 +48,7 @@ const RecipesList = ({ navigation }) => {
         data={data}
         renderItem={({ item }) => (
           <Container>
-            <RecipeImage source={require("../assets/Food-icon.png")} />
+            <RecipeImage source={require("../assets/Food2-icon.png")} />
             <Category>{item.category}</Category>
             <TimeContainer>
               <TimeIcon source={require("../assets/Time-icon.png")} />
@@ -71,6 +90,7 @@ const Safe = styled(SafeAreaView)`
 const List = styled.FlatList`
   flex: 1;
   position: relative;
+  background-color: #5650454d;
 `;
 
 const Container = styled.View`
@@ -115,7 +135,7 @@ const InfoContainer = styled.View`
 `;
 
 const HeaderContainer = styled.View`
-  border: 1px solid green;
+  border: 2px solid #d3d1cd;
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -187,7 +207,31 @@ const SearchImage = styled.Image`
 `;
 
 const SearchText = styled.TextInput`
-  font-size: 15px;
+  font-size: 17px;
+  color: white;
+  width: 200px;
+`;
+
+const Header = styled.View`
+  background-color: #e2d9cc;
+  display: flex;
+  flex-direction: row;
+  padding: 7.5px 0;
+`;
+
+const HeaderImageContainer = styled.View`
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  margin-right: 40px;
+`;
+
+const LogoContainer = styled.View`
+  flex: 1;
+  margin-left: 20px;
 `;
 
 export default RecipesList;
