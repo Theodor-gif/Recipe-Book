@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "Try",
-    "slug": "Try",
+    "name": "Recipe Book",
+    "slug": "recipe-book",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/screen.png",
     "userInterfaceStyle": "light",
     "ios": {
       "supportsTablet": true
@@ -15,10 +15,16 @@
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
-      }
+      },
+      "package": "com.theodor28.recipebook"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "1735b46c-520c-4ee5-a310-f7ef1f5334b9"
+      }
     }
   }
 }

@@ -29,8 +29,22 @@ function ContextProvider({ children }) {
     getData();
   }, []);
 
+  const handleSubmit = async (recipe) => {
+    try {
+      const response = await api.post("/recipes", recipe);
+      // Add the new recipe to local state so the UI updates immediately
+      setData((prevData) => [...prevData, response.data]);
+      return response.data;
+    } catch (error) {
+      console.error("Failed to submit recipe:", error);
+      throw error;
+    }
+  };
+
   return (
-    <contextData.Provider value={{ number, data, loading, search, setSearch }}>
+    <contextData.Provider
+      value={{ number, data, loading, search, setSearch, handleSubmit }}
+    >
       {children}
     </contextData.Provider>
   );
