@@ -74,7 +74,7 @@ const RecipesList = ({ navigation }) => {
         }
         ListFooterComponent={() => (
           <FooterContainer>
-            <Text>&copy; RECIPE BOOK | TM</Text>
+            <Text>© RECIPE BOOK | TM</Text>
           </FooterContainer>
         )}
         showsVerticalScrollIndicator={false}
@@ -89,21 +89,21 @@ const Safe = styled(SafeAreaView)`
 
 const List = styled.FlatList`
   flex: 1;
-  position: relative;
   background-color: #5650454d;
 `;
 
 const Container = styled.View`
   width: 80%;
-  margin: 0 auto 50px auto;
+  align-self: center;
+  margin-bottom: 50px;
   border-radius: 20px;
-  box-shadow: 0px 1px 2px #27190030;
   background-color: white;
   height: 270px;
-`;
-
-const Title = styled.Text`
-  color: red;
+  shadow-color: #271900;
+  shadow-offset: 0px 1px;
+  shadow-opacity: 0.19;
+  shadow-radius: 2px;
+  elevation: 3;
 `;
 
 const Category = styled.Text`
@@ -111,7 +111,7 @@ const Category = styled.Text`
   position: absolute;
   top: 15px;
   left: 210px;
-  font-size: 2rem;
+  font-size: 20px;
   width: 100px;
   text-align: right;
 `;
@@ -135,20 +135,22 @@ const InfoContainer = styled.View`
 `;
 
 const HeaderContainer = styled.View`
-  border: 2px solid #d3d1cd;
-  display: flex;
+  border-width: 2px;
+  border-color: #d3d1cd;
   flex-direction: row;
   gap: 10px;
   width: 70%;
-  margin: 20px auto 50px auto;
+  align-self: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
   padding: 10px;
   border-radius: 20px;
 `;
 
 const FooterContainer = styled.View`
-  margin: 100px 0 10px 0;
-  width: 100vw;
-  display: flex;
+  margin-top: 100px;
+  margin-bottom: 10px;
+  width: 100%;
   justify-content: center;
   align-items: center;
   height: 40px;
@@ -159,7 +161,6 @@ const TimeContainer = styled.View`
   position: absolute;
   top: 155px;
   left: 15px;
-  display: flex;
   flex-direction: row;
   align-items: center;
   z-index: 999;
@@ -179,7 +180,6 @@ const RecipeName = styled.Text`
 const ButtonContainer = styled.View`
   flex: 1;
   height: 100%;
-  display: flex;
   justify-content: center;
   align-items: center;
 `;
@@ -190,10 +190,15 @@ const TimeIcon = styled.Image`
 `;
 
 const Button = styled.TouchableOpacity`
-  padding: 5px 20px;
+  padding-vertical: 5px;
+  padding-horizontal: 20px;
   border-radius: 20px;
   background-color: #d96b43;
-  box-shadow: 1px 2px 5px grey;
+  shadow-color: grey;
+  shadow-offset: 1px 2px;
+  shadow-opacity: 0.5;
+  shadow-radius: 5px;
+  elevation: 3;
 `;
 
 const ButtonText = styled.Text`
@@ -214,14 +219,12 @@ const SearchText = styled.TextInput`
 
 const Header = styled.View`
   background-color: #e2d9cc;
-  display: flex;
   flex-direction: row;
-  padding: 7.5px 0;
+  padding: 7.5px 0px;
 `;
 
 const HeaderImageContainer = styled.View`
   flex: 1;
-  display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;

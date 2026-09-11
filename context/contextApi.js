@@ -20,9 +20,13 @@ function ContextProvider({ children }) {
         console.log("Fetched recipes:", recipes.data.length);
         setData(recipes.data);
       } catch (error) {
-        console.error("Failed to fetch recipes:", error);
+        console.error(
+          "Failed to fetch recipes:",
+          error?.message,
+          error?.response?.data,
+        );
+        setData([]); // fallback so UI doesn't crash on undefined
       } finally {
-        console.log("Setting loading to false");
         setLoading(false);
       }
     }
